@@ -15,27 +15,26 @@ int main() {
     wchar_t* tekst1 = L"racecar";
     
     PalindromeEntry* results1 = palindrom(tekst1);
-    //printf("Debug");
-    // Wypisywanie wyników dla pierwszego tekstu
+    // Wypisywanie wynikÃ³w dla pierwszego tekstu
     for (size_t i = 0; results1[i].length > 0; i++) {
         wprintf(L"Palindrome: %.*ls, Length: %zu, Address: %p\n",
             (int)results1[i].length, results1[i].address,
             results1[i].length, (void*)results1[i].address);
     }
 
-    free(results1); // Zwolnienie pamiêci
+    free(results1); 
 
     wchar_t* tekst2 = L"kajakarstwowt";
     PalindromeEntry* results2 = palindrom(tekst2);
 
-    // Wypisywanie wyników dla drugiego tekstu
+    // Wypisywanie wynikÃ³w dla drugiego tekstu
     for (size_t i = 0; results2[i].length > 0; i++) {
         wprintf(L"Palindrome: %.*ls, Length: %zu, Address: %p\n",
             (int)results2[i].length, results2[i].address,
             results2[i].length, (void*)results2[i].address);
     }
 
-    free(results2); // Zwolnienie pamiêci
+    free(results2); 
     return 0;
 }
 
